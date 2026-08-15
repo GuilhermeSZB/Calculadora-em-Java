@@ -30,7 +30,7 @@ O projeto foi criado com o objetivo de praticar conceitos fundamentais da lingua
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+git clone https://github.com/GuilhermeSZB/Calculadora-em-Java
 ```
 
 ### 2. Acesse a pasta
