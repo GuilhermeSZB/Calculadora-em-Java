@@ -3,6 +3,9 @@ import java.util.Scanner;
 
 public class calculadora {
 
+    
+    static Double num1 = 0;
+    static Double num2 = 0;
     //Métodos
     public static void menu() {
         System.out.println(" ==== MENU ==== ");
@@ -14,6 +17,12 @@ public class calculadora {
         System.out.println("4 - Divisão ");
         System.out.println("5 - Sair");
         System.out.println("  ");
+    }
+
+    public static double numeros(){
+        System.out.print("Qual é o numero: ");
+        double resposta = sc.nextDouble();
+        return resposta;
     }
     //Método para soma de dois numeros
     public static double soma(double num1, double num2) {
@@ -45,7 +54,9 @@ public class calculadora {
 
                 //IF para escolher qual tipo de conta o usuario precisa
                 if (escolha == 1) {
-                    resultado = soma(15, 30);
+                    num1 = numeros();
+                    num2 = numeros();
+                    resultado = soma(num1, num2);
                     System.out.println("A soma é de " + resultado);
                 } else if (escolha == 2) {
                     resultado = subtracao(15, 30);
