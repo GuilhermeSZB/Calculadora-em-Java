@@ -3,9 +3,9 @@ import java.util.Scanner;
 
 public class calculadora {
 
-    
-    static Double num1 = 0;
-    static Double num2 = 0;
+    static Scanner sc = new Scanner(System.in);
+    static double num1 = 0;
+    static double num2 = 0;
     //Métodos
     public static void menu() {
         System.out.println(" ==== MENU ==== ");
@@ -42,7 +42,6 @@ public class calculadora {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         double resultado = 0;
         int repeticao = 0;
 
@@ -58,18 +57,33 @@ public class calculadora {
                     num2 = numeros();
                     resultado = soma(num1, num2);
                     System.out.println("A soma é de " + resultado);
+
                 } else if (escolha == 2) {
-                    resultado = subtracao(15, 30);
+                    num1 = numeros();
+                    num2 = numeros();
+                    resultado = subtracao(num1, num2);
                     System.out.println("A subtração é de " + resultado);
+
                 } else if (escolha == 3) {
-                    resultado = multiplicao(15, 30);
+                    num1 = numeros();
+                    num2 = numeros();
+                    resultado = multiplicao(num1, num2);
                     System.out.println("A multiplicação é de " + resultado);
+
                 } else if (escolha == 4) {
-                    resultado = divisao(15, 30);
-                    System.out.println("A divisão é de " + resultado);
+                    num1 = numeros();
+                    num2 = numeros();
+                        if (num2 != 0) {
+                            resultado = divisao(num1, num2);
+                            System.out.println("A divisão é de " + resultado);
+                        } else {
+                            System.out.println("Não é possível dividir por zero!");
+                        }
+
                 } else if (escolha == 5) {
                     System.out.println(" ==== FIM SISTEMA ==== ");
                     repeticao = repeticao + 1;
+
                 } else {
                     System.out.println("Digite o numero certo!");
                     System.out.println(" ");
