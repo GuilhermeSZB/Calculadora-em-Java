@@ -7,11 +7,12 @@ public class calculadora {
     static double num1 = 0;
     static double num2 = 0;
     //Métodos
+
+    //Método para o inicio do 
     public static void menu() {
         System.out.println(" ==== MENU ==== ");
         System.out.println("  ");
         System.out.println("1 - Soma ");
-        System.out.println("2 - Subtração ");
         System.out.println("2 - Subtração ");
         System.out.println("3 - Multiplicação ");
         System.out.println("4 - Divisão ");
@@ -19,6 +20,7 @@ public class calculadora {
         System.out.println("  ");
     }
 
+    //Método para pedir o numero
     public static double numeros(){
         System.out.print("Qual é o numero: ");
         double resposta = sc.nextDouble();
