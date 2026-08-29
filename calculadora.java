@@ -21,8 +21,8 @@ public class calculadora {
     }
 
     //Método para pedir o numero
-    public static double numeros(){
-        System.out.print("Qual é o numero: ");
+    public static double numeros(String texto){
+        System.out.print(texto);
         double resposta = sc.nextDouble();
         return resposta;
     }
@@ -55,26 +55,26 @@ public class calculadora {
 
                 //IF para escolher qual tipo de conta o usuario precisa
                 if (escolha == 1) {
-                    num1 = numeros();
-                    num2 = numeros();
+                    num1 = numeros("Qual é o primeiro numero: ");
+                    num2 = numeros("Qual é o segundo numero: ");
                     resultado = soma(num1, num2);
                     System.out.println("A soma é de " + resultado);
 
                 } else if (escolha == 2) {
-                    num1 = numeros();
-                    num2 = numeros();
+                    num1 = numeros("Qual é o primeiro numero: ");
+                    num2 = numeros("Qual é o segundo numero: ");
                     resultado = subtracao(num1, num2);
                     System.out.println("A subtração é de " + resultado);
 
                 } else if (escolha == 3) {
-                    num1 = numeros();
-                    num2 = numeros();
+                    num1 = numeros("Qual é o primeiro numero: ");
+                    num2 = numeros("Qual é o segundo numero: ");
                     resultado = multiplicao(num1, num2);
                     System.out.println("A multiplicação é de " + resultado);
 
                 } else if (escolha == 4) {
-                    num1 = numeros();
-                    num2 = numeros();
+                    num1 = numeros("Qual é o primeiro numero: ");
+                    num2 = numeros("Qual é o segundo numero: ");
                         if (num2 != 0) {
                             resultado = divisao(num1, num2);
                             System.out.println("A divisão é de " + resultado);
