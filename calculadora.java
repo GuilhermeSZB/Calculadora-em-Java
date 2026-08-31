@@ -60,40 +60,59 @@ public class calculadora {
             menu();
             System.out.print("Digite o numero da opção que você precisa usar: ");
             int escolha = sc.nextInt();
+              switch (escolha) {
 
-                //IF para escolher qual tipo de conta o usuario precisa
-                if (escolha == 1) {
+                case 1:
+
                     pegarnumeros();
                     resultado = soma(num1, num2);
                     System.out.println("A soma é de " + resultado);
 
-                } else if (escolha == 2) {
+                    break;
+
+                case 2:
+
                     pegarnumeros();
                     resultado = subtracao(num1, num2);
                     System.out.println("A subtração é de " + resultado);
 
-                } else if (escolha == 3) {
+                    break;
+
+                case 3:
+
                     pegarnumeros();
                     resultado = multiplicao(num1, num2);
                     System.out.println("A multiplicação é de " + resultado);
 
-                } else if (escolha == 4) {
+                    break;
+
+                case 4:
+
                     pegarnumeros();
                         if (num2 != 0) {
                             resultado = divisao(num1, num2);
                             System.out.println("A divisão é de " + resultado);
                         } else {
                             System.out.println("Não é possível dividir por zero!");
-                        }
+                        }                    
 
-                } else if (escolha == 5) {
+                    break;
+
+                case 5:
+
                     System.out.println(" ==== FIM SISTEMA ==== ");
                     repeticao = repeticao + 1;
 
-                } else {
+                    break;
+                        
+              
+                default:
+
                     System.out.println("Digite o numero certo!");
                     System.out.println(" ");
-                }
+
+                    break;
+              }
         }
         sc.close();
     }
