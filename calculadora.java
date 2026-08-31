@@ -20,6 +20,7 @@ public class calculadora {
         System.out.println("  ");
     }
 
+
     //Método para pedir o numero
     public static double numeros(String texto){
         System.out.print(texto);
@@ -43,6 +44,13 @@ public class calculadora {
         return num1 / num2;
     }
 
+    //Método para perguntar sobre os dois numero
+    public static void pegarnumeros(){
+        num1 = numeros("Qual é o primeiro numero: ");
+
+        num2 = numeros("Qual é o segundo numero: ");
+    }
+
     public static void main(String[] args) {
         double resultado = 0;
         int repeticao = 0;
@@ -55,26 +63,22 @@ public class calculadora {
 
                 //IF para escolher qual tipo de conta o usuario precisa
                 if (escolha == 1) {
-                    num1 = numeros("Qual é o primeiro numero: ");
-                    num2 = numeros("Qual é o segundo numero: ");
+                    pegarnumeros();
                     resultado = soma(num1, num2);
                     System.out.println("A soma é de " + resultado);
 
                 } else if (escolha == 2) {
-                    num1 = numeros("Qual é o primeiro numero: ");
-                    num2 = numeros("Qual é o segundo numero: ");
+                    pegarnumeros();
                     resultado = subtracao(num1, num2);
                     System.out.println("A subtração é de " + resultado);
 
                 } else if (escolha == 3) {
-                    num1 = numeros("Qual é o primeiro numero: ");
-                    num2 = numeros("Qual é o segundo numero: ");
+                    pegarnumeros();
                     resultado = multiplicao(num1, num2);
                     System.out.println("A multiplicação é de " + resultado);
 
                 } else if (escolha == 4) {
-                    num1 = numeros("Qual é o primeiro numero: ");
-                    num2 = numeros("Qual é o segundo numero: ");
+                    pegarnumeros();
                         if (num2 != 0) {
                             resultado = divisao(num1, num2);
                             System.out.println("A divisão é de " + resultado);
