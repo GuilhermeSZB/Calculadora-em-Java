@@ -42,15 +42,18 @@ public class calculadora {
         case "*":
             return num1 * num2;
 
+        case "/":
+            if (num2 != 0 ){
+                double resultado = num1 / num2;
+                System.out.println("O resultado da divisão é de " + resultado);
+            } else {
+                System.out.println("Erro: Imposivel Dividir por Zero");
+            }
+
         default:
-            System.out.println("Operador inválido!");
+            System.out.println(" ");
             return 0; // RETORNO OBRIGATÓRIO: Se o operador for inválido, ele devolve 0
     }
-    }
-
-    //Métodos para divisão de dois numeros
-    public static double divisao(double num1, double num2) {
-        return num1 / num2;
     }
 
     //Método para perguntar sobre os dois numero
@@ -102,13 +105,9 @@ public class calculadora {
 
                 case 4:
 
+                    opr = "/";
                     pegarnumeros();
-                        if (num2 != 0) {
-                            resultado = divisao(num1, num2);
-                            System.out.println("A divisão é de " + resultado);
-                        } else {
-                            System.out.println("Não é possível dividir por zero!");
-                        }                    
+                    oper(num1, num2);               
 
                     break;
 
