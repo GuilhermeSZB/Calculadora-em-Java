@@ -6,6 +6,7 @@ public class calculadora {
     static Scanner sc = new Scanner(System.in);
     static double num1 = 0;
     static double num2 = 0;
+    static String opr = null;
     //Métodos
 
     //Método para o inicio do 
@@ -27,18 +28,26 @@ public class calculadora {
         double resposta = sc.nextDouble();
         return resposta;
     }
-    //Método para soma de dois numeros
-    public static double soma(double num1, double num2) {
-        return num1 + num2;
+
+    //Método para fazer a operação
+    public static double oper(double num1, double num2) {
+    switch (opr) {
+
+        case "+":
+            return num1 + num2;
+
+        case "-":
+            return num1 - num2;
+
+        case "*":
+            return num1 * num2;
+
+        default:
+            System.out.println("Operador inválido!");
+            return 0; // RETORNO OBRIGATÓRIO: Se o operador for inválido, ele devolve 0
     }
-    //Método para subtração de dois numeros
-    public static double subtracao(double num1, double num2) {
-        return num1 - num2;
     }
-    //Método para multiplicação de dois numeros
-    public static double multiplicao(double num1, double num2) {
-        return num1 * num2;
-    }
+
     //Métodos para divisão de dois numeros
     public static double divisao(double num1, double num2) {
         return num1 / num2;
@@ -60,12 +69,15 @@ public class calculadora {
             menu();
             System.out.print("Digite o numero da opção que você precisa usar: ");
             int escolha = sc.nextInt();
+
+            //Switch para escolha de qual tipo de conta o usuario quer utilizar
               switch (escolha) {
 
                 case 1:
 
                     pegarnumeros();
-                    resultado = soma(num1, num2);
+                    opr = "+";
+                    resultado = oper(num1, num2);
                     System.out.println("A soma é de " + resultado);
 
                     break;
@@ -73,7 +85,8 @@ public class calculadora {
                 case 2:
 
                     pegarnumeros();
-                    resultado = subtracao(num1, num2);
+                    opr = "-";
+                    resultado = oper(num1, num2);
                     System.out.println("A subtração é de " + resultado);
 
                     break;
@@ -81,7 +94,8 @@ public class calculadora {
                 case 3:
 
                     pegarnumeros();
-                    resultado = multiplicao(num1, num2);
+                    opr = "*";
+                    resultado = oper(num1, num2);
                     System.out.println("A multiplicação é de " + resultado);
 
                     break;
